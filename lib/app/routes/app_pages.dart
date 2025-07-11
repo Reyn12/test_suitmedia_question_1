@@ -21,21 +21,29 @@ class AppPages {
       name: _Paths.HOME,
       page: () => const HomeView(),
       binding: HomeBinding(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(milliseconds: 300),
     ),
     GetPage(
       name: _Paths.FIRST_SCREEN,
       page: () => const FirstScreenView(),
       binding: FirstScreenBinding(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(milliseconds: 300),
     ),
     GetPage(
       name: _Paths.SECOND_SCREEN,
       page: () => const SecondScreenView(),
       binding: SecondScreenBinding(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(milliseconds: 300),
     ),
     GetPage(
       name: _Paths.THIRD_SCREEN,
       page: () => const ThirdScreenView(),
       binding: ThirdScreenBinding(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(milliseconds: 300),
     ),
   ];
 }

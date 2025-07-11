@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:test_suitmedia_question_1/app/routes/app_pages.dart';
 import '../../../core/widgets/loading_dialog.dart';
 import '../../../core/values/app_colors.dart';
-import '../models/user_model.dart';
 
 class FirstScreenController extends GetxController {
   // Text controllers input fields
   late TextEditingController nameController;
   late TextEditingController palindromeController;
-
-  // User data
-  final Rx<UserModel?> user = Rx<UserModel?>(null);
 
   // Palindrome status
   final isPalindrome = false.obs;
@@ -86,10 +83,7 @@ class FirstScreenController extends GetxController {
       return;
     }
 
-    // Save user data to model
-    user.value = UserModel(name: nameController.text);
-
     // Navigate to second screen with user data
-    Get.toNamed('/second', arguments: user.value!.toJson());
+    Get.toNamed(Routes.SECOND_SCREEN, arguments: {'name': nameController.text});
   }
 }

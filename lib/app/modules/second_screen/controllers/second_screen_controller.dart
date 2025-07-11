@@ -1,23 +1,28 @@
 import 'package:get/get.dart';
 
 class SecondScreenController extends GetxController {
-  //TODO: Implement SecondScreenController
+  // Variabel untuk nama user dari first screen
+  final userName = ''.obs;
 
-  final count = 0.obs;
+  // Variabel untuk nama user yang dipilih dari third screen
+  final selectedUser = 'Selected User Name'.obs;
+
   @override
   void onInit() {
     super.onInit();
+    // Ambil data dari arguments saat navigasi
+    if (Get.arguments != null && Get.arguments['name'] != null) {
+      userName.value = Get.arguments['name'];
+    }
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  // Method untuk pergi ke third screen
+  void goToThirdScreen() {
+    Get.toNamed('/third');
   }
 
-  @override
-  void onClose() {
-    super.onClose();
+  // Method untuk update selected user dari third screen
+  void updateSelectedUser(String name) {
+    selectedUser.value = name;
   }
-
-  void increment() => count.value++;
 }
