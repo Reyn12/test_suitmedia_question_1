@@ -1,16 +1,40 @@
-# test_suitmedia_question_1
+# Test Suitmedia Question 1
 
-A new Flutter project.
+Flutter application with GetX Pattern and clean architecture optimized for best performance.
 
-## Getting Started
+## Main Features
 
-This project is a starting point for a Flutter application.
+- First Screen with input validation and palindrome dialog
+- Second Screen with user name display and navigation
+- Third Screen with API fetching from reqres.in, infinite scroll, pull-to-refresh, and skeleton loading
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+| First Screen | Popup Check | Second Screen |
+| --- | --- | --- |
+| ![First Screen](/screenshoot/first_screen.png) | ![Popup Check](/screenshoot/popup_check.png) | ![Second Screen](/screenshoot/second_screen.png) |
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Second Screen Selected | Third Screen |
+| --- | --- |
+| ![Second Screen Selected](/screenshoot/second_screen_selected.png) | ![Third Screen](/screenshoot/third_screen.png) |
+
+## Clean Architecture Implementation
+
+In this project, we apply clean architecture principles by breaking UI components into separate widgets to facilitate maintenance and testing:
+
+### Widget Structure
+- Each screen has a `widgets` folder containing separate UI components
+- Widgets are named using the format `w_widgetname.dart`
+- UI is separated from business logic with GetX controllers
+
+### Loading Optimization
+- Using skeleton loading during data fetching for better UX
+- Custom minimal 1-second loading delay for smooth skeleton animation
+- Efficient infinite scroll implementation with pagination
+- Pull-to-refresh for fetching latest data
+
+### GetX Pattern
+- Reactive state management with Rx variables
+- Structured navigation and routing
+- Simple dependency injection
+- Clear separation between Model, View, and Controller
