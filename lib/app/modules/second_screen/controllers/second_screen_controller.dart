@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import '../../../routes/app_pages.dart';
 
 class SecondScreenController extends GetxController {
   // Variabel untuk nama user dari first screen
@@ -18,7 +19,7 @@ class SecondScreenController extends GetxController {
 
   // Method untuk pergi ke third screen
   void goToThirdScreen() {
-    Get.toNamed('/third');
+    Get.toNamed(Routes.THIRD_SCREEN);
   }
 
   // Method untuk update selected user dari third screen
